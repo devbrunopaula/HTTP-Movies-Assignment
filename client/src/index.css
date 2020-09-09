@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #f2f2f2;
+  background-color: #e6e3e3;
 }
 
 .movie-card {
@@ -36,6 +36,23 @@ body {
   justify-content: space-between;
 }
 
+.cards {
+  /* padding: 20px 20px; */
+  /* border: solid red; */
+}
+
+.card {
+  padding: 20px 20px;
+  border: solid red;
+}
+
+.card--footer {
+  display: flex;
+}
+.card-updated {
+  flex: 1;
+}
+
 .saved-list h3 {
   margin-right: 10px;
 }
@@ -60,6 +77,19 @@ body {
   border: 1px solid grey;
   padding: 5px 10px;
   background-color: lightseagreen;
+}
+.edit-button {
+  position: absolute;
+  top: 65px;
+  right: 25px;
+  border: 1px solid grey;
+  padding: 5px 14px;
+  color: red;
+  cursor: pointer;
+}
+.edit-button:hover {
+  background-color: rgb(128, 0, 0);
+  color: white;
 }
 .save-button:hover {
   background-color: green;

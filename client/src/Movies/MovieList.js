@@ -1,19 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import MovieCard from "./MovieCard";
+import React from 'react'
+import {Link} from 'react-router-dom'
+import MovieCard from './MovieCard'
+import Alert from 'react-bootstrap/Alert'
+import Container from 'react-bootstrap/Container'
 
-function MovieList({ movies }) {
+function MovieList({movies, deleteAlert}) {
   return (
-    <div className="movie-list">
-      {
-        movies.map(movie => (
+    <Container>
+      <div>
+        {deleteAlert && (
+          <Alert transition variant='danger'>
+            Your Movie Has Been Deleted...
+          </Alert>
+        )}
+
+        {movies.map((movie) => (
           <Link key={movie.id} to={`/movies/${movie.id}`}>
             <MovieCard movie={movie} />
           </Link>
-        ))
-      }
-    </div>
-  );
+        ))}
+      </div>
+    </Container>
+  )
 }
 
-export default MovieList;
+export default MovieList
